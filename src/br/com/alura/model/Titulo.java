@@ -10,11 +10,11 @@ public class Titulo {
 
     // Método para exibir as principais especificações do filme ou serie
     public void exibeFichaTecnica(){
-        System.out.println("Categoria: " + categoria);
         System.out.println("Tipo: " + tipo);
+        System.out.println("Categoria: " + categoria);
         System.out.println("Nome: " + nome);
         System.out.println("Ano de Lançamento: " + anoLancamento);
-        System.out.println("Classificação: " + classificcao);
+        System.out.println("Classificação: " + classificcao + " anos");
         System.out.println("Duração em minutos: " + duracaoMinutos);
         System.out.println("Incluso na plataforma: " + inclusoPlano);
     }

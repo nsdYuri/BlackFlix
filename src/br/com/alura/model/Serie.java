@@ -3,7 +3,7 @@ package br.com.alura.model;
 public class Serie extends Titulo{
 
     private String plataforma;
-    private int qtdTemp, qtdEpTemp, qtdMinutosEp;
+    private int qtdTemp, qtdEpTemp, minutosEp;
 
     public String getPlataforma() {
         return plataforma;
@@ -29,11 +29,11 @@ public class Serie extends Titulo{
         this.qtdEpTemp = qtdEpTemp;
     }
 
-    public int getQtdMinutosEp() {
-        return qtdMinutosEp;
+    public int getMinutosEp() {
+        return minutosEp;
     }
 
-    public void setQtdMinutosEp(int qtdMinutosEp) {
-        this.qtdMinutosEp = qtdMinutosEp;
+    public void setMinutosEp(int minutosEp) {
+        this.minutosEp = minutosEp;
     }
 }

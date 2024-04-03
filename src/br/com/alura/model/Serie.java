@@ -1,6 +1,6 @@
 package br.com.alura.model;
 
-public class Serie {
+public class Serie extends Titulo{
 
     private String plataforma;
     private int qtdTemp, qtdEpTemp, qtdMinutosEp;

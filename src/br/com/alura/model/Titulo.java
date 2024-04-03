@@ -2,10 +2,34 @@ package br.com.alura.model;
 
 public class Titulo {
 
-    private String nome, categoria;
+    private String nome, tipo, categoria;
     private int anoLancamento, duracaoMinutos, totalAvaliacoes, classificcao;
     private double somaAvaliacoes;
     private boolean inclusoPlano;
+
+
+    // Método para exibir as principais especificações do filme ou serie
+    public void exibeFichaTecnica(){
+        System.out.println("Categoria: " + categoria);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Nome: " + nome);
+        System.out.println("Ano de Lançamento: " + anoLancamento);
+        System.out.println("Classificação: " + classificcao);
+        System.out.println("Duração em minutos: " + duracaoMinutos);
+        System.out.println("Incluso na plataforma: " + inclusoPlano);
+    }
+
+    // Método para ter a soma de todas as notas e a quantidade
+    public void avalia(double nota){
+        somaAvaliacoes += nota;
+        totalAvaliacoes++;
+    }
+
+    // Método para calcular a média baseado na soma de todas as notas e quantidade delas, informações
+    // disponibilizadas pelo método a cima.
+    public double calculaMedia(){
+        return somaAvaliacoes / totalAvaliacoes;
+    }
 
     public String getNome() {
         return nome;
@@ -13,6 +37,14 @@ public class Titulo {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getTipo(){
+        return tipo;
+    }
+
+    public void setTipo(String tipo){
+        this.tipo = tipo;
     }
 
     public String getCategoria() {

@@ -1,6 +1,6 @@
 package br.com.alura.model;
 
-public class Filme {
+public class Filme extends Titulo{
 
     private String diretor;
     private boolean emCartaz;

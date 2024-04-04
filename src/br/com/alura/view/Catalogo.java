@@ -1,9 +1,10 @@
 package br.com.alura.view;
 
+import br.com.alura.calculos.CalculadoraTempo;
 import br.com.alura.model.Filme;
 import br.com.alura.model.Serie;
 
-public class catalogo {
+public class Catalogo {
     public static void main(String[] args) {
 
         Filme bob = new Filme();
@@ -41,22 +42,6 @@ public class catalogo {
         curtis.avalia(9.5);
         curtis.avalia(10);
 
-        Filme give = new Filme();
-        give.setTipo("Filme");
-        give.setNome("The Hate That U Give");
-        give.setDiretor("George Tillman, Jr.");
-        give.setCategoria("Crime/Thriller");
-        give.setAnoLancamento(2018);
-        give.setDuracaoMinutos(132);
-        give.setClassificcao(14);
-        give.setEmCartaz(false);
-        give.setInclusoPlano(false);
-
-        give.exibeFichaTecnica();
-
-        give.avalia(8);
-        give.avalia(7.5);
-        give.avalia(9);
 
         Serie air = new Serie();
         air.setTipo("Série");
@@ -64,7 +49,6 @@ public class catalogo {
         air.setPlataforma("Star+");
         air.setCategoria("Drama");
         air.setAnoLancamento(2022);
-        air.setDuracaoMinutos(180);
         air.setClassificcao(14);
         air.setQtdTemp(2);
         air.setQtdEpTemp(10);
@@ -72,10 +56,19 @@ public class catalogo {
         air.setInclusoPlano(false);
 
         air.exibeFichaTecnica();
+        System.out.println("São necessários " + air.getDuracaoMinutos() + " minutos para maratonar a série.");
 
         air.avalia(10);
         air.avalia(8);
         air.avalia(8.7);
+
+        CalculadoraTempo calc = new CalculadoraTempo();
+
+        calc.gerenciadorTempo(bob);
+        System.out.println("Tempo total de " + bob.getNome() + " é: " + calc.getTempoTotal() + " minutos");
+
+        calc.gerenciadorTempo(curtis);
+        System.out.println("Tempo total de " + curtis.getNome() + " é: " + calc.getTempoTotal() + " minutos");
 
 
 

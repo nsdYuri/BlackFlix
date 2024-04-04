@@ -25,6 +25,7 @@ public class Titulo {
         totalAvaliacoes++;
     }
 
+
     // Método para calcular a média baseado na soma de todas as notas e quantidade delas, informações
     // disponibilizadas pelo método a cima.
     public double calculaMedia(){

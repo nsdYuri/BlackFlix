@@ -5,6 +5,10 @@ public class Serie extends Titulo{
     private String plataforma;
     private int qtdTemp, qtdEpTemp, minutosEp;
 
+    public int getDuracaoMinutos(){
+        return qtdEpTemp * qtdEpTemp * minutosEp;
+    }
+
     public String getPlataforma() {
         return plataforma;
     }
